@@ -1,5 +1,6 @@
 import { HStack, Spacer, Link } from "@chakra-ui/react";
-import logo from "../../assets/flor1.jfif"
+import logo from "../../assets/flor.png"
+import { Card } from "./Card";
 
 const Navbar = () => {
     return (
@@ -12,6 +13,8 @@ const Navbar = () => {
                 <Link>Oferts</Link>
                 <Link>Contact</Link>
             </HStack>
+            <Spacer />
+            <Card />
         </HStack>
     )
 }

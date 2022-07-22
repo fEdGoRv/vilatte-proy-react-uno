@@ -1,13 +1,13 @@
 import Header from "./Header"
 import Footer from "./Footer"
-import Main from "./Main"
 import { ChakraProvider } from "@chakra-ui/react";
+import ItemListConteiner from "./ItemListConteiner";
 
 function App() {
     return (
         <ChakraProvider>
             <Header />
-            <Main nombre="Fede"/>
+            <ItemListConteiner nombre="Fede"/>
             <Footer />
         </ChakraProvider>
     )
