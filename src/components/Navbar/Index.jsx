@@ -1,6 +1,6 @@
 import { HStack, Spacer, Link } from "@chakra-ui/react";
 import logo from "../../assets/flor.png"
-import { Card } from "./Card";
+import { CartWidget } from "./CartWidget/CartWidget";
 
 const Navbar = () => {
     return (
@@ -14,7 +14,7 @@ const Navbar = () => {
                 <Link>Contact</Link>
             </HStack>
             <Spacer />
-            <Card />
+            <CartWidget />
         </HStack>
     )
 }

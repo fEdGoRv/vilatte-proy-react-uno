@@ -1,7 +1,8 @@
 import Header from "./Header"
 import Footer from "./Footer"
 import { ChakraProvider } from "@chakra-ui/react";
-import ItemListConteiner from "./ItemListConteiner";
+import ItemListConteiner from "./ItemListConteiner/ItemListConteiner";
+
 
 function App() {
     return (
