@@ -1,10 +1,12 @@
-import { HStack, Box , Button , ButtonGroup } from "@chakra-ui/react"
+import { HStack, Box, Button, Text } from "@chakra-ui/react"
 import { useState } from "react"
 import { Cart } from "../../../Navbar/CartWidget/Cart/Cart"
+import { TiArrowSortedUp } from "react-icons/ti";
+import { TiArrowSortedDown } from "react-icons/ti";
 
-const ItemCount = ({ inicial, stock }) => {
+const ItemCount = ({ inicial, stock, onAdd }) => {
 
-    const [contador, setContador] = useState(0)
+    const [contador, setContador] = useState(inicial)
 
     const aumentarConatdor = () => {
         if (contador < stock) {
@@ -16,18 +18,17 @@ const ItemCount = ({ inicial, stock }) => {
             setContador(contador - 1)
         }
     }
-    const addOnCart = () =>{
-        <Cart contador="contador"/>
+    const addOnCart = () => {
+        <Cart contador="contador" />
     }
-    console.log(contador)
     return (
-        <Box>
-            <HStack spacing={2}>
-                <Button size='sm' m={2} colorScheme='blue' onClick={aumentarConatdor}>+</Button>
-                <div>{contador}</div>
-                <Button size='sm' m={2} colorScheme='blue' onClick={disminuirContador}>-</Button>
+        <Box textAlign="center">
+            <HStack>
+                <Button size='sm' m={2} colorScheme='blue' onClick={aumentarConatdor}><TiArrowSortedUp></TiArrowSortedUp></Button>
+                <Text>{contador}</Text>
+                <Button size='sm' m={2} colorScheme='blue' onClick={disminuirContador}><TiArrowSortedDown></TiArrowSortedDown></Button>
+                <Button onClick={addOnCart} size='sm' m={2} colorScheme='blue'>addOnCart</Button>
             </HStack>
-            <Button onClick={addOnCart} size='sm' m={2} colorScheme='blue'>addOnCart</Button>
         </Box>
     )
 }

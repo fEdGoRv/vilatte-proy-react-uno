@@ -7,7 +7,7 @@ const Navbar = () => {
         <HStack bg="peru">
             <img src={logo} width="100px" alt="" />
             <Spacer />
-            <HStack>
+            <HStack as="nav">
                 <Link>Home</Link>
                 <Link>Products</Link>
                 <Link>Oferts</Link>
