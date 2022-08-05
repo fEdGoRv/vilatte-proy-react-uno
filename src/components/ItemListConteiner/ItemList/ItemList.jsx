@@ -1,11 +1,13 @@
 
-import {Item} from './Item/Item'
-
-const ItemList = ({listProducts}) => {
+import { Item } from './Item/Item'
+import { HStack } from '@chakra-ui/react'
+const ItemList = ({ listProducts }) => {
 
   return (
-      listProducts.map(product => <Item key={product.Id} product={product} />) 
+    <HStack> 
+      {listProducts.map(product => <Item key={product.Id} product={product} />)}
+    </HStack>
   )
 }
 
-export {ItemList}
+export { ItemList }
