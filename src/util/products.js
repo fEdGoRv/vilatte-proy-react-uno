@@ -5,7 +5,7 @@ export const products = [
         Categoria:"",
         Descripcion:"aaaaaaaaa",
         Precio:2000,
-        Url:"https://www.sunsetboard.com/producto/mat-7mm-negro/",
+        Url:"https://m.media-amazon.com/images/I/51LETZEh8-L._AC_SL1000_.jpg",
 
     },{
         Id:2,
@@ -13,13 +13,13 @@ export const products = [
         Categoria:"",
         Descripcion:"aaaaaaaaa",
         Precio:2200,
-        Url:"https://www.digitalsport.com.ar/gimnasia-en-casa/prod/yoga-mat-marrakesh-gaiam-566236/", 
+        Url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6BErHRKyLBoGnfF0e7F-oLNGLq69iwce_Ug&usqp=CAU", 
     },{
         Id:3,
         Titulo:"Mat 3",
         Categoria:"",
-        Descripcion:"aaaaaaaaa",
+        Descripcion:"kkkkkk",
         Precio:2100,
-        Url:"https://laalyoga.com/blog/como-elegir-mi-primer-mat-de-yoga/",
+        Url:"https://m.media-amazon.com/images/I/41nXlP1zA+L.jpg",
     }
   ]

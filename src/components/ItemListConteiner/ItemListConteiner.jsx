@@ -11,7 +11,7 @@ const ItemListConteiner = ({ nombre }) => {
 
     useEffect(()=>{
         setLoading(true)
-        customFetch({products})
+        customFetch(products)
         .then(res => {
             setLoading(false)
             setListProducts(res)
