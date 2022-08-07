@@ -1,10 +1,12 @@
 
 import { HStack, Spacer, Image, Text, Heading, Button, Link, Box } from '@chakra-ui/react'
 
-const Item = ({ product }) => {
-  
+const Item = ({ product, buscarKey }) => {
+    
+     {/* const key = product.Id
+onClick={()=>buscarKey({key})}*/}
     return (
-        <Box border='1px' p="1" w="200px" borderColor='green.100'>
+        <Box  border='1px' p="1" w="200px" borderColor='green.100'>
             <HStack>
                 <Heading>{product.Titulo}</Heading>
                 <Spacer/>

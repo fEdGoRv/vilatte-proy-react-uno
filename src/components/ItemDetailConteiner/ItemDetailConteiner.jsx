@@ -2,33 +2,38 @@ import React from 'react'
 import { ItemDetail } from './ItemDetail/ItemDetail'
 import { useEffect, useState } from 'react'
 import { Box, Text } from '@chakra-ui/react'
-import { customFetch } from '../../util/customFetch'
+import { customFetch2 } from '../../util/customFetch2'
+import { products } from '../../util/products'
+import { Item } from '../ItemListConteiner/ItemList/Item/Item'
 
 export const ItemDetailConteiner = () => {
- 
-    const [prodcut, setProduct] = useState({})
+    const key = 1
+    const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(true)
-    const producto = { 
-        Id:3,
-        Titulo:"Mat 3",
-        Categoria:"",
-        Descripcion:"kkkkkk",
-        Precio:2100,
-        Url:"https://m.media-amazon.com/images/I/41nXlP1zA+L.jpg",
+    {/* const producto = (key) => {
+        products.find(product => product.Id === key);
+        return (product={product})
     }
+    const buscarKey = (key) =>{producto(key)}
+    producto={producto} 
 
-    useEffect(()=>{
+ <Item buscarKey={buscarKey}/>
+*/}
+    
+   useEffect(() => {
         setLoading(true)
-        customFetch(producto)
-        .then(()=>{
-            setLoading(false)
-            setProduct(producto)
-        })
-    },[])
+        customFetch2(products, key)
+       
+            .then(() => {
+                setLoading(false)
+                setProduct(res)
+            })
+        }, [])
 
     return (
         <Box>
-            {!loading ? <ItemDetail key={producto.Id }producto={producto}/> : <Text>Cargando...</Text>}
+
+            {!loading ? <ItemDetail key={key} product={product}/> : <Text>Cargando...</Text>}
         </Box>
     )
 }

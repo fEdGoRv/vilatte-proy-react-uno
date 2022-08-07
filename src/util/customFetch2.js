@@ -1,7 +1,9 @@
-export const customFetch = (producto) => {
+export const customFetch2 = (products, key) => {
+    const p = products.find(p => p.Id == key)
     return new Promise((res, rej) => {
         setTimeout(() => {
-            res(producto)
+            res(p)
         }, 2000)
     })
 }
+
