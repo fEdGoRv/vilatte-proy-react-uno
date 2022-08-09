@@ -22,12 +22,12 @@ const ItemCount = ({ inicial, stock, onAdd }) => {
         <Cart contador="contador" />
     }
     return (
-        <Box textAlign="center">
+        <Box textAlign="center" margin="2">
             <HStack>
                 <Button size='sm' m={2} colorScheme='blue' onClick={aumentarConatdor}><TiArrowSortedUp></TiArrowSortedUp></Button>
                 <Text>{contador}</Text>
                 <Button size='sm' m={2} colorScheme='blue' onClick={disminuirContador}><TiArrowSortedDown></TiArrowSortedDown></Button>
-                <Button onClick={addOnCart} size='sm' m={2} colorScheme='blue'>addOnCart</Button>
+                <Button onClick={addOnCart} size='sm' m={2} colorScheme='blue'>agregarAlCart</Button>
             </HStack>
         </Box>
     )
