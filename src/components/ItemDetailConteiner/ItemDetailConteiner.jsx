@@ -2,29 +2,29 @@ import React from 'react'
 import { ItemDetail } from './ItemDetail/ItemDetail'
 import { useEffect, useState } from 'react'
 import { Box, Text } from '@chakra-ui/react'
-import { customFetch2 } from '../../util/customFetch2'
+import { customFetch } from '../../util/customFetch'
 import { products } from '../../util/products'
-
+import { useParams } from "react-router-dom"
 
 export const ItemDetailConteiner = () => {
-    const key = 1
+    const r = useParams()
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(true)
     
    useEffect(() => {
         setLoading(true)
-        customFetch2(products, key)
+        customFetch(products)
        
             .then(res => {
                 setLoading(false)
-                setProduct(res)
+                setProduct(res.find(product=>r.id==product.Id))
             })
-        }, [])
+        }, [r.id])
 
     return (
         <Box>
 
-            {!loading ? <ItemDetail key={key} product={product}/> : <Text>Cargando...</Text>}
+            {!loading ? <ItemDetail product={product}/> : <Text>Cargando...</Text>}
         </Box>
     )
 }

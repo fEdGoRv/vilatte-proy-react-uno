@@ -14,7 +14,7 @@ const Item = ({ product }) => {
             <Text>{product.Descripcion}</Text>
             <Image src={product.Url} w="100px" alt={product.Titulo} />
             <Button colorScheme='blue' size="xs">
-                <Link as={ReactRouterLink} to="/detalle" style={{textDecoration:'none'}}>Ver Detalle</Link>
+                <Link as={ReactRouterLink} to={`/detalle/${product.Id}`} style={{textDecoration:'none'}}>Ver Detalle</Link>
             </Button>
         </Box>
     )
