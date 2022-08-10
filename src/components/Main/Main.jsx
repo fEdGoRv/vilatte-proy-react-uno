@@ -8,10 +8,10 @@ export const Main = () => {
     return (
         <Routes>
             <Route path='/cart' element={<Cart/>} />
-            <Route path='/categoria1' element={<ItemListConteiner />} />
-            <Route path='/categoria2' element={<ItemListConteiner />} />
+            <Route path='/categoria/:categoria' element={<ItemListConteiner  />} />
+            <Route path='/categoria/:categoria' element={<ItemListConteiner  />} />
             <Route path='/detalle/:id' element={<ItemDetailConteiner />} />
-            <Route path='/home' element={<ItemListConteiner />} />
+            <Route path='/' element={<ItemListConteiner greeting="Bienvenidos a nuetra tienda :)"/>} />
         </Routes>
     )
 }
