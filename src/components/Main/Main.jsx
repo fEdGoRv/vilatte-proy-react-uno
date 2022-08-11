@@ -11,7 +11,7 @@ export const Main = () => {
             <Route path='/categoria/:categoria' element={<ItemListConteiner  />} />
             <Route path='/categoria/:categoria' element={<ItemListConteiner  />} />
             <Route path='/detalle/:id' element={<ItemDetailConteiner />} />
-            <Route path='/' element={<ItemListConteiner greeting="Bienvenidos a nuetra tienda :)"/>} />
+            <Route path='/' element={<ItemListConteiner />} />
         </Routes>
     )
 }

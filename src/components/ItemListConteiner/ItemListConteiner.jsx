@@ -1,16 +1,18 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { products } from '../../util/products'
 import { customFetch } from "../../util/customFetch";
 import { ItemList } from './ItemList/ItemList';
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 import { Loader } from "../Loader/Loader"
+import { Encabezado } from "../Encabezado/Encabezado"
+import logo from "../../assets/logoAmarillo.jpg"
 
-const ItemListConteiner = ({ greeting }) => {
+const ItemListConteiner = () => {
     const p = useParams()
-    const compararCategoria = (listProducts) => {
-        if (listProducts.Categoria == p.categoria) {
-            return (listProducts)
+    const compararCategoria = (product) => {
+        if (product.Categoria == p.categoria) {
+            return (product)
         }
     }
     const [loading, setLoading] = useState(true)
@@ -31,10 +33,8 @@ const ItemListConteiner = ({ greeting }) => {
         )
     } else {
         return (
-            <Box textAlign="center">
-                <Heading bg="lightgreen">
-                    {greeting}
-                </Heading>
+            <Box>
+                <Encabezado Titulo="Bienvenidos :)" Subtitulo="Visita nuestras secciones de Yoga Y Fitnes" Abatar={logo} />
                 <ItemList listProducts={listProducts} />
             </Box>
 

@@ -20,7 +20,7 @@ export const ItemDetail = ({ product }) => {
             <Image m="auto" src={product.Url} w="200px" alt={product.Titulo} />
             <Text>{product.Descripcion}</Text>
             <Box>
-                <ItemCount inicial="1" stock="10" />
+                <ItemCount inicial={0} stock={10} />
             </Box>
         </Box>
     )
