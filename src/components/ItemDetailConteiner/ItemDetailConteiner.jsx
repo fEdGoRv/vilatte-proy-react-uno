@@ -5,6 +5,8 @@ import { customFetch } from '../../util/customFetch'
 import { products } from '../../util/products'
 import { useParams } from "react-router-dom"
 import { Loader } from '../Loader/Loader'
+import { Encabezado } from '../Encabezado/Encabezado'
+import logo from '../../assets/company.png'
 
 export const ItemDetailConteiner = () => {
     const r = useParams()
@@ -27,7 +29,10 @@ export const ItemDetailConteiner = () => {
         )
     } else {
         return (
+            <>
+            <Encabezado Titulo="Nos Alegra que hayas encontado lo buscabas!!" Subtitulo="Pruebalo y no esta conforme, la devolución es sin costo :)" Abatar={logo} />
             <ItemDetail product={product} />
+            </>
         )
     }
 }

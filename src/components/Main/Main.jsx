@@ -9,7 +9,6 @@ export const Main = () => {
         <Routes>
             <Route path='/cart' element={<Cart/>} />
             <Route path='/categoria/:categoria' element={<ItemListConteiner  />} />
-            <Route path='/categoria/:categoria' element={<ItemListConteiner  />} />
             <Route path='/detalle/:id' element={<ItemDetailConteiner />} />
             <Route path='/' element={<ItemListConteiner />} />
         </Routes>
