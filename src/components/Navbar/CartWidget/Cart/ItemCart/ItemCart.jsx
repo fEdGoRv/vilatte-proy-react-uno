@@ -1,15 +1,18 @@
-import { HStack, Spacer, Text, Heading, Image } from "@chakra-ui/react"
+import { HStack, Box, Spacer } from "@chakra-ui/react"
 
-export const ItemCart = ({product}) => {
+export const ItemCart = ({ product, productCount }) => {
   return (
     <HStack>
-      <Image src={product.Url} w="100px" alt={product.Titulo} />
+      <Box width="100px">
+        <img src={product.Url} />
+      </Box>
       <HStack>
-        <Heading>{product.Titulo}</Heading>
+        {product.Titulo}
+        {productCount}
         <Spacer />
-        <Text>${product.Precio}</Text>
+        {product.Precio}
+
       </HStack>
-      <Text>{product.Descripcion}</Text>
     </HStack>
   )
 }

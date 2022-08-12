@@ -2,8 +2,23 @@ import React from 'react'
 import { ItemCount } from './ItemCount/ItemCount'
 import { Box, Heading, HStack, Image, Spacer, Text, Link } from '@chakra-ui/react'
 import { ImCross } from "react-icons/im"
+import {useState} from 'react'
+import { Cart } from '../../Navbar/CartWidget/Cart/Cart'
 
 export const ItemDetail = ({ product }) => {
+
+    const [productCount, setProductCount] = useState({})
+    const setCount =()=>{
+        setProductCount()
+        console.log(setProductCount())
+         //mandarAlCart()
+    }
+    
+
+   /* const mandarAlCart = ({productCount, product}) =>{
+        <Cart product={product} productCount={productCount} />
+    }*/
+    
 
     const cambiarDisplay = () =>{
         document.querySelector(".container").style.display="none";
@@ -20,7 +35,7 @@ export const ItemDetail = ({ product }) => {
             <Image m="auto" src={product.Url} w="200px" alt={product.Titulo} />
             <Text>{product.Descripcion}</Text>
             <Box>
-                <ItemCount inicial={0} stock={10} />
+                <ItemCount inicial={0} stock={10} onAdd={setCount} />
             </Box>
         </Box>
     )

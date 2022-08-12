@@ -23,9 +23,14 @@ const ItemListConteiner = () => {
         customFetch(products)
             .then(res => {
                 setLoading(false)
-                setListProducts(res.filter((compararCategoria)))
+                if(p.categoria){
+                    setListProducts(res.filter((compararCategoria)))
+                }else{
+                    setListProducts(res)
+                }
+                
             })
-    }, [p.categoria])
+    }, [p.categoria,p])
 
     if (loading) {
         return (
