@@ -30,7 +30,7 @@ export const ItemDetailConteiner = () => {
     } else {
         return (
             <>
-            <Encabezado Titulo="Nos Alegra que hayas encontado lo buscabas!!" Subtitulo="Pruebalo y no esta conforme, la devolución es sin costo :)" Abatar={logo} />
+            <Encabezado Titulo="Nos Alegra que hayas encontrado lo buscabas!!" Subtitulo="Pruebalo y sino estas conforme, la devolución es sin costo :)" Abatar={logo} />
             <ItemDetail product={product} />
             </>
         )

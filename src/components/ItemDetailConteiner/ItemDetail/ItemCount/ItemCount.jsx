@@ -4,9 +4,9 @@ import { TiArrowSortedUp } from "react-icons/ti";
 import { TiArrowSortedDown } from "react-icons/ti";
 
 const ItemCount = ({ inicial, stock, onAdd }) => {
-    console.log(onAdd)
-
+    
     const [contador, setContador] = useState(inicial)
+    const mandarParametros = () =>{onAdd(contador)}
 
     const aumentarConatdor = () => {
         if (contador < stock) {
@@ -24,7 +24,7 @@ const ItemCount = ({ inicial, stock, onAdd }) => {
                 <Button size='sm' m={2} colorScheme='blue' onClick={aumentarConatdor}><TiArrowSortedUp /></Button>
                 <Text>{contador}</Text>
                 <Button size='sm' m={2} colorScheme='blue' onClick={disminuirContador}><TiArrowSortedDown /></Button>
-                <Button onClick={onAdd} size='sm' m={2} colorScheme='blue'>agregarAlCart</Button>
+                <Button onClick={mandarParametros} size='sm' m={2} colorScheme='blue'>agregarAlCart</Button>
             </HStack>
         </Box>
     )
