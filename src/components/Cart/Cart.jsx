@@ -6,7 +6,8 @@ const Cart = ({product}) => {
   
   return (
     <Box>
-      <ItemCart product={product}/>
+     Cart 
+     {/*<ItemCart product={product}/>*/}
     </Box>
   )
 }

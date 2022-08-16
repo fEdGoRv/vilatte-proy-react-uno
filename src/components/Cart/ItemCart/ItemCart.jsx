@@ -1,6 +1,6 @@
 import { HStack, Box, Spacer } from "@chakra-ui/react"
 
-export const ItemCart = ({ product, productCount }) => {
+export const ItemCart = ({ product }) => {
   return (
     <HStack>
       <Box width="100px">
@@ -8,7 +8,7 @@ export const ItemCart = ({ product, productCount }) => {
       </Box>
       <HStack>
         {product.Titulo}
-        {productCount}
+        {product.cantidad}
         <Spacer />
         {product.Precio}
 

@@ -2,13 +2,16 @@ import Header from "./Header"
 import Footer from "./Footer"
 import { ChakraProvider } from "@chakra-ui/react";
 import { Main } from "./Main/Main";
+import { CartContextprovider } from "../context/CartContext/CartContext"
 
 function App() {
     return (
         <ChakraProvider>
-            <Header />
-            <Main />
-            <Footer />
+            <CartContextprovider>
+                <Header />
+                <Main />
+                <Footer />
+            </CartContextprovider>
         </ChakraProvider>
     )
 }
