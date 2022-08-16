@@ -4,7 +4,7 @@ export const ItemCart = ({ product, productCount }) => {
   return (
     <HStack>
       <Box width="100px">
-        <img src={product.Url} />
+        <img src={product.Url} alt={product.Titulo}/>
       </Box>
       <HStack>
         {product.Titulo}

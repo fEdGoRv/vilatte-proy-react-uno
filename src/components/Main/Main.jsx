@@ -2,7 +2,7 @@ import React from 'react'
 import ItemDetailConteiner from '../ItemDetailConteiner/ItemDetailConteiner'
 import ItemListConteiner from '../ItemListConteiner/ItemListConteiner'
 import {Routes, Route} from "react-router-dom"
-import {Cart} from "../Navbar/CartWidget/Cart/Cart"
+import {Cart} from "../Cart/Cart"
 
 export const Main = () => {
     return (

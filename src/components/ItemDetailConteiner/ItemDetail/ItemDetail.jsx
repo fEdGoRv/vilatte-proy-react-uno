@@ -3,8 +3,6 @@ import { ItemCount } from './ItemCount/ItemCount'
 import { Box, Heading, HStack, Image, Spacer, Text, Link } from '@chakra-ui/react'
 import { ImCross } from "react-icons/im"
 
-
-
 export const ItemDetail = ({ product }) => {
 
     const onAdd = (contador) => {
