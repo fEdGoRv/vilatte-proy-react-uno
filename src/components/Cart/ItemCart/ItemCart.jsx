@@ -1,6 +1,6 @@
 import { HStack, Box, Spacer } from "@chakra-ui/react"
 
-export const ItemCart = ({ product }) => {
+export const ItemCart = (product) => {
   return (
     <HStack>
       <Box width="100px">

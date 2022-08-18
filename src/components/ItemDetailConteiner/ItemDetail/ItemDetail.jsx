@@ -4,15 +4,17 @@ import { Box, Heading, HStack, Image, Spacer, Text, Link, Button } from '@chakra
 import { ImCross } from "react-icons/im"
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { useCartContext } from '../../../context/CartContext/CartContext'
 
 export const ItemDetail = ({ product }) => {
 
     const [isAdded, setIsAdded] = useState(false)
+    const {isInCart, AddToCart}=useCartContext()
 
     const onAdd = (contador) => {
         setIsAdded(true)
-        /*product.cantidad=contador        
-        console.log(product)*/
+        isInCart(product.Id) 
+        AddToCart(product, contador)
     }
 
     const cambiarDisplay = () => {
@@ -20,7 +22,7 @@ export const ItemDetail = ({ product }) => {
     }
 
     return (
-        <Box className="container" textAlign="center" border="1px" w="500px" m="auto" borderColor="green.800">
+        <Box textAlign="center" border="1px" w="500px" m="auto" borderColor="green.800" marginTop={2} px={2}  rounded="20px" overflow="hidden" boxShadow="sm">
             <HStack>
                 <Heading>{product.Titulo}</Heading>
                 <Text>${product.Precio}</Text>

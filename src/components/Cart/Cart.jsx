@@ -2,12 +2,13 @@ import { Box } from "@chakra-ui/react"
 import { ItemCart } from "./ItemCart/ItemCart"
 
 
+
 const Cart = ({product}) => {
   
   return (
     <Box>
      Cart 
-     {/*<ItemCart product={product}/>*/}
+     <ItemCart product={product}/>
     </Box>
   )
 }
