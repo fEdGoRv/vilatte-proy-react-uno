@@ -29,7 +29,7 @@ export function CartContextprovider({ children }) {
 
   const removeProduct = (id) => { cartList.filter(prod => prod.Id !== id) }
 
-  const cleanCart = setCartList([])
+  const cleanCart = () => setCartList([])
 
   const totalPrice = () => {
     return cartList.reduce((acc, product) => acc += (product.Precio * product.cantidad, 0))
