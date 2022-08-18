@@ -14,7 +14,8 @@ export const ItemDetail = ({ product }) => {
     const onAdd = (contador) => {
         setIsAdded(true)
         isInCart(product.Id) 
-        AddToCart(product, contador)
+        const cantidad = contador
+        AddToCart(product, cantidad)
     }
 
     const cambiarDisplay = () => {

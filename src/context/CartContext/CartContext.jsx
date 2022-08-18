@@ -10,7 +10,7 @@ export function CartContextprovider({ children }) {
   const isInCart = (id) => cartList.find(product => product.Id === id)
 
   const addToCart = (product, cantidad) => {
-
+    
     if (isInCart(product.Id)) {
       const newCart = cartList.map(prod => {
         if (product.Id === prod.Id) {
@@ -25,14 +25,14 @@ export function CartContextprovider({ children }) {
       const newProduct = { ...product, cantidad: cantidad }
       setCartList([...cartList, newProduct])
     }
-  }
+   }
 
-  const removeProduct = (id) => { cartList.filter(prod => prod.Id != id) }
+  const removeProduct = (id) => { cartList.filter(prod => prod.Id !== id) }
 
   const cleanCart = setCartList([])
 
   const totalPrice = () => {
-    return cartList.reduce((acc, product) => acc += (product.Precio * product.cantidad))
+    return cartList.reduce((acc, product) => acc += (product.Precio * product.cantidad, 0))
   }
 
   const totalQuantity = () => {
