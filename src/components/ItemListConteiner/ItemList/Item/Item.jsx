@@ -5,7 +5,7 @@ import { Link as ReactRouterLink} from "react-router-dom"
 const Item = ({ product }) => {
     
     return (
-        <Box border='1px' textAlign="center" px={2} w="200px" borderColor='green.100' rounded="20px" overflow="hidden" boxShadow="sm">
+        <Box border='2px' textAlign="center" px={2} w="200px" borderColor='green.500' rounded="20px" overflow="hidden" boxShadow="sm">
             <HStack>
                 <Heading>{product.Titulo}</Heading>
                 <Spacer/>
@@ -13,7 +13,7 @@ const Item = ({ product }) => {
             </HStack>
             <Text>{product.Descripcion}</Text>
             <Image src={product.Url} w="100px" alt={product.Titulo} />
-            <Button colorScheme='blue' size="xs" m={2}>
+            <Button color="blue.500" size="xs" m={2}>
                 <Link as={ReactRouterLink} to={`/detalle/${product.Id}`} style={{textDecoration:'none'}}>Ver Detalle</Link>
             </Button>
         </Box>

@@ -20,7 +20,7 @@ export const products = [
         Categoria:"Yoga",
         Descripcion:"kkkkkk",
         Precio:2150,
-        Url:"https://m.media-amazon.com/images/I/41nXlP1zA+L.jpg",
+        Url:"https://cdn.cnn.com/cnnnext/dam/assets/200331142851-yogajadeyoga-super-169.jpg",
     },{
         Id:4,
         Titulo:"Pesa 1",
