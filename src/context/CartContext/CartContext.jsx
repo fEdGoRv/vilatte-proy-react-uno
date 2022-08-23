@@ -28,7 +28,7 @@ export function CartContextprovider({ children }) {
    }
 
   const removeProduct = (id) =>{ 
-  cartList.filter(prod => prod.Id !== id)
+    setCartList(cartList.filter(prod => prod.Id !== id))
   } 
  
 
@@ -39,7 +39,7 @@ export function CartContextprovider({ children }) {
   }
 
   const totalQuantity = () => {
-    return cartList.reduce((acc, product) => acc += product.cantidad , 0 )
+    return cartList.reduce((acc, product) => acc += product.Cantidad , 0 )
     
   }
 
