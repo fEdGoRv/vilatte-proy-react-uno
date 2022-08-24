@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom"
 import { Loader } from "../Loader/Loader"
 import { Encabezado } from "../Encabezado/Encabezado"
 import logo from "../../assets/logoAmarillo.jpg"
+import { db } from "../../firebase/Firebase"
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemListConteiner = () => {
     const p = useParams()
@@ -19,18 +21,29 @@ const ItemListConteiner = () => {
     const [listProducts, setListProducts] = useState([])
 
     useEffect(() => {
+
         setLoading(true)
-        customFetch(products)
-            .then(res => {
+        const productsCollection = collection(db, "products")
+        const query = getDocs(productsCollection)
+
+            .then(snapshot => {
                 setLoading(false)
-                if(p.categoria){
-                    setListProducts(res.filter((compararCategoria)))
-                }else{
-                    setListProducts(res)
+                const Productos = snapshot.docs.map(doc => {
+                    return {
+                        ...doc.data(), Id: doc.id
+                    }
+                })
+                if (p.categoria) {
+                    setListProducts(Productos.filter((compararCategoria)))
+                } else {
+                    setListProducts(Productos)
                 }
-                
             })
-    }, [p.categoria,p])
+            .catch(err => {
+                console.log(err)
+            })
+    }, [p, p.categoria])
+
 
     if (loading) {
         return (
