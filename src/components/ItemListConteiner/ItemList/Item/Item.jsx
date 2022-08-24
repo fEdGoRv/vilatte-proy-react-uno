@@ -11,8 +11,7 @@ const Item = ({ product }) => {
                 <Spacer/>
                 <Text>${product.Precio}</Text>
             </HStack>
-            <Text>{product.Descripcion}</Text>
-            <Image src={product.Url} w="100px" alt={product.Titulo} />
+            <Image src={product.Url} w="100px" m={2} alt={product.Titulo} />
             <Button color="blue.500" size="xs" m={2}>
                 <Link as={ReactRouterLink} to={`/detalle/${product.Id}`} style={{textDecoration:'none'}}>Ver Detalle</Link>
             </Button>

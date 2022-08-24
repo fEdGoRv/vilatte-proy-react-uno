@@ -1,8 +1,8 @@
 import React from 'react'
 import { ItemDetail } from './ItemDetail/ItemDetail'
 import { useEffect, useState } from 'react'
-import { customFetch } from '../../util/customFetch'
-import { products } from '../../util/products'
+import { db } from "../../firebase/Firebase"
+import { collection, getDocs, getDoc } from "firebase/firestore";
 import { useParams } from "react-router-dom"
 import { Loader } from '../Loader/Loader'
 import { Encabezado } from '../Encabezado/Encabezado'
@@ -14,14 +14,21 @@ export const ItemDetailConteiner = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        setLoading(true)
-        customFetch(products)
-
+        //setLoading(true)
+        const products = collection(db, "products")
+        const query = getDocs(products)       
+        
             .then(res => {
                 setLoading(false)
-                setProduct(res.find(product => r.id == product.Id))
-            })
-    }, [r.id])
+                const Productos = res.docs.map(doc => {
+                    return {
+                        ...doc.data(), Id: doc.id
+                    }
+                })
+                
+                setProduct(Productos.find(prod=>prod.Id===r.id))   
+    })}
+    , [r.id])
 
     if (loading) {
         return (

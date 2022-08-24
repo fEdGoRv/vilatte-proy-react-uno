@@ -1,6 +1,4 @@
 import { Box } from "@chakra-ui/react";
-import { products } from '../../util/products'
-import { customFetch } from "../../util/customFetch";
 import { ItemList } from './ItemList/ItemList';
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
