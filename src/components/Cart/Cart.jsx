@@ -1,4 +1,4 @@
-import { HStack, Box, Spacer, Text, Button} from "@chakra-ui/react"
+import { HStack, Box, Spacer, Text, Button } from "@chakra-ui/react"
 import { NavLink } from "react-router-dom"
 import { ImCross } from "react-icons/im"
 import { useCartContext } from "../../context/CartContext/CartContext"
@@ -24,6 +24,7 @@ const Cart = () => {
   }
 
   return (
+
     <Box>
       <Encabezado Abatar={logo} Titulo="Revisa tu compra!" Subtitulo="Tu conformidad es nuestro objetivo!" />
       {cartList.map(product =>
@@ -45,6 +46,9 @@ const Cart = () => {
       <Box>
         <Button color="blue.500" onClick={() => cleanCart()}>Vaciar carrito</Button>
       </Box>
+
+      <NavLink to="/checkOut"><Button color="blue.500">Ir al CheckOut</Button></NavLink>
+
     </Box>
   )
 }
