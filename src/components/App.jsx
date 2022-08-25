@@ -4,6 +4,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Main } from "./Main/Main";
 import { CartContextprovider } from "../context/CartContext/CartContext"
 import "../firebase/Firebase"
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
     return (
@@ -12,6 +14,7 @@ function App() {
                 <Header />
                 <Main />
                 <Footer />
+                <ToastContainer />
             </CartContextprovider>
         </ChakraProvider>
     )

@@ -5,8 +5,11 @@ import { useCartContext } from "../../context/CartContext/CartContext"
 import { Encabezado } from "../Encabezado/Encabezado"
 import logo from "../../assets/logoAmarillo.jpg"
 
+
+
+
 const Cart = () => {
- 
+
   const { cartList, totalPrice, cleanCart, removeProduct } = useCartContext()
 
   if (cartList.length === 0) {

@@ -14,7 +14,7 @@ export const ItemDetailConteiner = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        //setLoading(true)
+        setLoading(true)
         const products = collection(db, "products")
         const query = getDocs(products)       
         

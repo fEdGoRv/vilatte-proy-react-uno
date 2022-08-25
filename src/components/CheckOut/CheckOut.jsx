@@ -1,7 +1,10 @@
 import { Encabezado } from "../Encabezado/Encabezado"
 import { Box, Button, Input, Stack, FormControl, Heading } from "@chakra-ui/react"
-import { useState } from "react"
+import { useState, useNavigate } from "react"
 import { useCartContext } from "../../context/CartContext/CartContext"
+import { toast } from "react-toastify";
+import { db } from "../../firebase/Firebase"
+import { collection, addDoc , serverTimestamp } from "firebase/firestore"
 
 export const CheckOut = () => {
     const [customer, setCustomer] = useState({
@@ -11,7 +14,7 @@ export const CheckOut = () => {
         adress: ''
     })
 
-    const { totalPrice, cartList } = useCartContext()
+    const { totalPrice, cartList, cleanCart } = useCartContext()
 
     const handlerChangeInput = (e) => {
         setCustomer({
@@ -21,14 +24,23 @@ export const CheckOut = () => {
     }
 
     const handlerSubmit = (e) => {
+
         e.preventDefault()
         const order = {
             item: cartList,
             buyer: { ...customer },
-            price: totalPrice()
+            price: totalPrice(),
+            date: serverTimestamp()
         }
          formCleaner()
-        {console.log(order)}
+         cleanCart()
+        const ordersCollection = collection(db,"orders")
+        const query = addDoc(ordersCollection, order)
+        query
+        .then(res => 
+            toast.success(`Su pedido de ha realizado con exito! con el id: ${res.id}`)
+            )
+            .catch(error => toast.error(`Algo salio mal intentalo de nuevo!`))
     }
 
     const formCleaner = () =>{
