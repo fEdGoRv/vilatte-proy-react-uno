@@ -36,7 +36,7 @@ export const ItemDetail = ({ product }) => {
             <Box>
                 {
                     !isAdded ?
-                        <ItemCount inicial={0} stock={10} onAdd={onAdd} />
+                        <ItemCount inicial={1} stock={10} onAdd={onAdd} />
                         :
                         <NavLink to="/Cart">
                             <Button size='sm' m={2} colorScheme='blue'>Ir al Carrito</Button>
