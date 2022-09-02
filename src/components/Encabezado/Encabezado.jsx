@@ -3,9 +3,9 @@ import { Heading, HStack, Box } from "@chakra-ui/react"
 export const Encabezado = ({ Titulo, Subtitulo, Abatar }) => {
 
     return (
-        <Heading bgColor="lightgreen" p="2">
+        <Heading bgColor="lightgreen" p="2" marginBottom={2}>
             <HStack>
-                  <img src={Abatar} width="80px"/>
+                  <img src={Abatar} alt="logo"width="80px"/>
                 <Box>
                     <Box>
                         <h2>{Titulo}</h2>
