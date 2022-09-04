@@ -1,5 +1,10 @@
 # proy-react-uno
 Este es un e-commerce que fue realizado a modo de practica con motivo de iniciarme, en el mundo de React js, este contiene algunos productos creados para la ocacion para poder mostrar las funcionalidades del proyecto. 
+Estas son: 
+* Poder ver todos los productos que estan cargados en la DDBB desde el home, pero tambien verse filtrado por secciones de Fitness y Yoga.
+* Ver el detalle de cada producto.
+* Poder agregarlo al carrito sumando la cantidad deaseada.
+* Realizar la compra llenado un formulario con los datos personales que luego se almacenan en la base de datos en firebase.
 
 ## Para arrancar el proyecto
 
@@ -12,7 +17,7 @@ Podras ver la App abriendo:
 Aunque arrancando el proyecto se abrira solo navegador.
 
 ## Para clonar el proyecto y tenerlo en su ordenado puede hacerlo de la siguiente manera:
-* Accede a este :enlace
+* Accede a este enlace:
   (https://github.com/fEdGoRv/vilatte-proy-react-uno).
 * Sobre la lista de archivos, da clic en el boton: Code.
 * Copia la URL del repositorio.
@@ -21,7 +26,7 @@ Aunque arrancando el proyecto se abrira solo navegador.
 * Cambia el directorio de trabajo actual a la ubicación en donde quieres clonar el directorio.
 * Escribe git clone, y luego pega la URL que copiaste antes, presiona Enter.
 
-## El esta realizado haciendo uso de las siguientes librerias:
+## El proyecto esta realizado haciendo uso de las siguientes librerias:
 * @chakra-ui/react
 * @emotion/react
 * @emotion/styled
@@ -39,7 +44,7 @@ Aunque arrancando el proyecto se abrira solo navegador.
 * react-toastify
 * web-vitals
 
-## Deploy del proyecto.
+## El deploy del proyecto esta realizado en el siguiente enlace:
  (https://superb-kleicha-33f689.netlify.app/)
 
 
