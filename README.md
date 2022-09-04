@@ -45,7 +45,7 @@ Aunque arrancando el proyecto se abrira solo navegador.
 * web-vitals
 
 ## El deploy del proyecto esta realizado en el siguiente enlace:
- ()
+ (https://incredible-griffin-af038c.netlify.app/)
 
 
 
