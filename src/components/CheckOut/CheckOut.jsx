@@ -1,6 +1,6 @@
 import { Encabezado } from "../Encabezado/Encabezado"
 import { Box, Button, Input, Stack, FormControl, Heading } from "@chakra-ui/react"
-import { useState, useNavigate } from "react"
+import { useState} from "react"
 import { useCartContext } from "../../context/CartContext/CartContext"
 import { toast } from "react-toastify";
 import { db } from "../../firebase/Firebase"

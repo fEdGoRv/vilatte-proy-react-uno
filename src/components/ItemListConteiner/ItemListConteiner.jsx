@@ -7,6 +7,7 @@ import { Encabezado } from "../Encabezado/Encabezado"
 import logo from "../../assets/logoAmarillo.jpg"
 import { db } from "../../firebase/Firebase"
 import { collection, getDocs } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 const ItemListConteiner = () => {
     const p = useParams()
@@ -37,8 +38,8 @@ const ItemListConteiner = () => {
                     setListProducts(Productos)
                 }
             })
-            .catch(err => {
-                console.log(err)
+            .catch(error => {
+                toast.error("error")
             })
     }, [p, p.categoria])
 

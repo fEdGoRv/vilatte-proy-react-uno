@@ -15,7 +15,7 @@ const Cart = () => {
   if (cartList.length === 0) {
     return (
       <Box>
-        <Encabezado />
+        <Encabezado Abatar={logo}  />
         <HStack>
           <Text>
             No tenes productos en el Carrito

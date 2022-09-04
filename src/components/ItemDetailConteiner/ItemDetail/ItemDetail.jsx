@@ -24,7 +24,7 @@ export const ItemDetail = ({ product }) => {
     }
 
     return (
-        <Box textAlign="center" border="2px" w="500px" m="auto" borderColor="green.800" marginTop={2} px={2}  rounded="20px" overflow="hidden" boxShadow="sm">
+        <Box className='container' textAlign="center" border="2px" w="500px" m="auto" borderColor="green.800" marginTop={2} px={2}  rounded="20px" overflow="hidden" boxShadow="sm">
             <HStack>
                 <Heading>{product.Titulo}</Heading>
                 <Text>${product.Precio}</Text>
