@@ -12,7 +12,7 @@ export const ItemDetailConteiner = () => {
     const r = useParams()
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(true)
-
+    
     useEffect(() => {
         setLoading(true)
         const products = collection(db, "products")
@@ -20,8 +20,9 @@ export const ItemDetailConteiner = () => {
         const query = getDoc(reference)    
             query
             .then(res => {
+                const resId = {...res.data(),Id:r.id}
                 setLoading(false)
-                setProduct(res.data())
+                setProduct(resId)
                 })
     }
     , [r.id])

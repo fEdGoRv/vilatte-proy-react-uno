@@ -11,20 +11,21 @@ import { toast } from "react-toastify";
 
 const ItemListConteiner = () => {
     const p = useParams()
-    const compararCategoria = (product) => {
-        if (product.Categoria == p.categoria) {
-            return (product)
-        }
-    }
     const [loading, setLoading] = useState(true)
     const [listProducts, setListProducts] = useState([])
 
     useEffect(() => {
+        
+        const compararCategoria = (product) => {
+            if (product.Categoria === p.categoria) {
+                return (product)
+            }
+        }
 
         setLoading(true)
         const productsCollection = collection(db, "products")
         const query = getDocs(productsCollection)
-
+            query
             .then(snapshot => {
                 setLoading(false)
                 const Productos = snapshot.docs.map(doc => {
@@ -41,7 +42,7 @@ const ItemListConteiner = () => {
             .catch(error => {
                 toast.error("error")
             })
-    }, [p, p.categoria])
+    }, [p.categoria])
 
 
     if (loading) {

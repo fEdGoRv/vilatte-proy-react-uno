@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 import { useCartContext } from '../../../context/CartContext/CartContext'
 
 export const ItemDetail = ({ product }) => {
-
+    
     const [isAdded, setIsAdded] = useState(false)
     const {isInCart, addToCart} = useCartContext()
 
@@ -15,7 +15,6 @@ export const ItemDetail = ({ product }) => {
         setIsAdded(true)
         isInCart(product.Id)
         const cantidad = contador
- 
         addToCart(product, cantidad)
     }
 
