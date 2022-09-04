@@ -45,7 +45,7 @@ Aunque arrancando el proyecto se abrira solo navegador.
 * web-vitals
 
 ## El deploy del proyecto esta realizado en el siguiente enlace:
- (https://superb-kleicha-33f689.netlify.app/)
+ (https://ornate-quokka-bfb4ba.netlify.app/)
 
 
 
