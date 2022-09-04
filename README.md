@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# proy-react-uno
+Este es un e-commerce que fue realizado a modo de practica con motivo de iniciarme, en el mundo de React js, este contiene algunos productos creados para la ocacion para poder mostrar las funcionalidades del proyecto. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Para arrancar el proyecto
 
-## Available Scripts
-
-In the project directory, you can run:
+En el directorio del mismo en la consola podes poner el siguiente comando:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Podras ver la App abriendo:
+ * [http://localhost:3000](http://localhost:3000) para verla en navegador.
+Aunque arrancando el proyecto se abrira solo navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Para clonar el proyecto y tenerlo en su ordenado puede hacerlo de la siguiente manera:
+* Accede a este :enlace
+  (https://github.com/fEdGoRv/vilatte-proy-react-uno).
+* Sobre la lista de archivos, da clic en el boton: Code.
+* Copia la URL del repositorio.
+    *Para clonar el repositorio utilizando HTTPS, debajo de "HTTPS", haz clic en el de la carpeta.
+* Abre la Git Bash.
+* Cambia el directorio de trabajo actual a la ubicación en donde quieres clonar el directorio.
+* Escribe git clone, y luego pega la URL que copiaste antes, presiona Enter.
 
-### `npm test`
+## El esta realizado haciendo uso de las siguientes librerias:
+* @chakra-ui/react
+* @emotion/react
+* @emotion/styled
+* @testing-library/jest-dom
+* @testing-library/react
+* @testing-library/user-event
+* firebase
+* framer-motion
+* react
+* react-dom
+* react-icons
+* react-loader-spinner
+* react-router-dom
+* react-scripts
+* react-toastify
+* web-vitals
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deploy del proyecto.
+ (https://superb-kleicha-33f689.netlify.app/)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
